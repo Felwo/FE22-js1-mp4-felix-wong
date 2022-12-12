@@ -1,0 +1,44 @@
+:root{
+    --clr-background-: rgb(34,34,34);
+    --clr-cursor-: rgb(242,242,242);
+}
+/*Med detta på så känns interactivity väldigt dåligt, känns som att den laggy pga animation*/
+*{
+ /* cursor: none; */
+}
+
+body{
+    background-color: var(--clr-background-);
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#blocks {
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+#cursor {
+    height: 66px;
+    width: 66px;
+    border-radius: 50%;
+    background-color: var(--clr-cursor-);
+    
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 400ms ease;
+}
+
+body:hover > #cursor {
+    opacity: 1;
+}
