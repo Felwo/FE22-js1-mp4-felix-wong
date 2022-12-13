@@ -105,7 +105,7 @@ const cursorIdleAnimation = {
 anime(cursorIdleAnimation);
 
 //Instruction label section
-anime({
+let instructionDropInAnimation = anime({
   targets: '#instruction-label',
   keyframes: [
     {translateY: -800},
@@ -113,4 +113,15 @@ anime({
   ],
   duration: 2000,
   easing: 'easeOutElastic(1.4, .9)',
-});
+  loop: false
+})
+
+instructionDropInAnimation.finished.then(() => anime({
+  targets: '#instruction-label',
+  keyframes: [
+    {scale: 0.94},
+    {scale: 1}
+  ],
+  duration: 1500,
+  loop: true
+}));
