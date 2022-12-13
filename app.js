@@ -104,3 +104,13 @@ const cursorIdleAnimation = {
 };
 anime(cursorIdleAnimation);
 
+//Instruction label section
+anime({
+  targets: '#instruction-label',
+  keyframes: [
+    {translateY: -800},
+    {translateY: 50},
+  ],
+  duration: 2000,
+  easing: 'easeOutElastic(1.4, .9)',
+});

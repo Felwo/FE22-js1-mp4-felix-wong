@@ -1,5 +1,6 @@
 :root{
     --clr-background-: rgb(34,34,34);
+    --clr-label-: rgb(230, 230, 230);
     --clr-cursor-: rgb(242,242,242);
 }
 /*Med detta på så känns interactivity väldigt dåligt, känns som att den laggy pga animation*/
@@ -12,6 +13,15 @@ body{
     height: 100vh;
     overflow: hidden;
     margin: 0px;
+}
+
+#instruction-label{
+    position: fixed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--clr-label-);
+    text-align: center;
+    left: 44%;
+    transform: translate(-50%, 0);
 }
 
 #blocks {
